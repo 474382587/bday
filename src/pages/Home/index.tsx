@@ -4,7 +4,9 @@ import Snowflake from '../../components/Snowflake';
 import TypeEffect from '../../components/TypeEffect';
 
 import { passcode } from '../../config.js';
+import Angel from '../Angel';
 import Coco from '../Coco';
+import Sunshine from '../Sunshine';
 
 import './index.css';
 
@@ -37,11 +39,11 @@ const Home = () => {
     case 'Honghao':
       return <h1>Hello Honghao</h1>;
     case 'Sunshine':
-      return <h1>Hello Sunshine</h1>;
+      return <Sunshine />;
     case 'Kit':
       return <h1>Hello Kit</h1>;
     case 'Angel':
-      return <h1>Hello Angel</h1>;
+      return <Angel />;
     default:
       return (
         <>

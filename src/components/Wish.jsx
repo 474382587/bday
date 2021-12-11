@@ -26,7 +26,7 @@ const Wish = ({ avatar, name, phoneNumber }) => {
       try {
         await fetch(
           `https://cors-anywhere.herokuapp.com/https://api.sms.to/sms/send?to=${phoneNumber}&message=${`祝${name}的心愿：${wish1}，${wish2}，${wish3}，全部实现！~ 还有额外奖品：${prize}`}\n
-          祝愿你在接下来的一年开开心心，健康幸福~
+          祝愿你在接下来的一年开开心心，健康幸福 ~ ~ ~
           `,
           {
             method: 'POST',
@@ -159,10 +159,9 @@ const Wish = ({ avatar, name, phoneNumber }) => {
                       },
                     ],
                     row: 1,
-                    x: 0,
-                    y: 0,
+                    x: 2,
+                    y: 1,
                   },
-
                   {
                     col: 1,
                     fonts: [
@@ -172,7 +171,7 @@ const Wish = ({ avatar, name, phoneNumber }) => {
                       },
                     ],
                     row: 1,
-                    x: 2,
+                    x: 0,
                     y: 1,
                   },
                   {
@@ -197,7 +196,7 @@ const Wish = ({ avatar, name, phoneNumber }) => {
                       },
                     ],
                     row: 1,
-                    x: 2,
+                    x: 0,
                     y: 2,
                   },
                   {
@@ -209,8 +208,8 @@ const Wish = ({ avatar, name, phoneNumber }) => {
                       },
                     ],
                     row: 1,
-                    x: 2,
-                    y: 0,
+                    x: 1,
+                    y: 2,
                   },
                   {
                     col: 1,
@@ -221,8 +220,8 @@ const Wish = ({ avatar, name, phoneNumber }) => {
                       },
                     ],
                     row: 1,
-                    x: 1,
-                    y: 2,
+                    x: 2,
+                    y: 0,
                   },
                   {
                     col: 1,
@@ -234,7 +233,7 @@ const Wish = ({ avatar, name, phoneNumber }) => {
                     ],
                     row: 1,
                     x: 0,
-                    y: 2,
+                    y: 0,
                   },
                   {
                     col: 1,
@@ -245,8 +244,8 @@ const Wish = ({ avatar, name, phoneNumber }) => {
                       },
                     ],
                     row: 1,
-                    x: 0,
-                    y: 1,
+                    x: 2,
+                    y: 2,
                   },
                 ]}
                 width={300}

@@ -86,7 +86,11 @@ const Coco = () => {
         </div>
       )}
       {showWish && (
-        <Wish phoneNumber={'+17788299426'} avatar={Avatar} name={'董小姐'} />
+        <Wish
+          phoneNumber={process.env.REACT_APP_ANGEL}
+          avatar={Avatar}
+          name={'董小姐'}
+        />
       )}
     </>
   );
