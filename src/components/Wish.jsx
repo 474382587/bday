@@ -1,4 +1,4 @@
-import { LuckyWheel, LuckyGrid } from '@lucky-canvas/react';
+import { LuckyGrid } from '@lucky-canvas/react';
 import { Button, Input } from 'antd';
 import { useState, useRef } from 'react';
 import './Wish.css';
@@ -222,7 +222,7 @@ const Wish = ({ avatar, name }) => {
               />
             </div>
             {prize !== '' && (
-              <p className='congrats'>
+              <p className="congrats">
                 <span>
                   恭喜你中了个<em>{prize}</em>！截图发群里 ~
                 </span>

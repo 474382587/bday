@@ -1,4 +1,4 @@
-import { Card, Modal, Radio, Space } from 'antd';
+import { Card, Radio, Space } from 'antd';
 import { useEffect, useState } from 'react';
 import TypeEffect from '../../components/TypeEffect';
 
