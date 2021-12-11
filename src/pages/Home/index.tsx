@@ -1,5 +1,6 @@
 import { Card, Radio, Space } from 'antd';
 import { useEffect, useState } from 'react';
+import Snowflake from '../../components/Snowflake';
 import TypeEffect from '../../components/TypeEffect';
 
 import { passcode } from '../../config.js';
@@ -44,8 +45,9 @@ const Home = () => {
     default:
       return (
         <>
-          {showPopup && (
+          {false && (
             <div className="welcome">
+              <Snowflake />
               <h1>圣诞的季节 就是你的季节</h1>
               <h1>又是一年十二月，生日快乐~</h1>
               <p></p>

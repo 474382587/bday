@@ -1,9 +1,9 @@
 import { LuckyGrid } from '@lucky-canvas/react';
 import { Button, Input } from 'antd';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './Wish.css';
 
-const Wish = ({ avatar, name }) => {
+const Wish = ({ avatar, name, phoneNumber }) => {
   const myLucky = useRef();
   const [showGrid, setShowGrid] = useState(false);
 
@@ -20,6 +20,38 @@ const Wish = ({ avatar, name }) => {
     }
     setShowGrid(true);
   };
+
+  useEffect(() => {
+    const sendPrizeMsg = async () => {
+      try {
+        await fetch(
+          `https://cors-anywhere.herokuapp.com/https://api.sms.to/sms/send?to=${phoneNumber}&message=${`祝${name}的心愿：${wish1}，${wish2}，${wish3}，全部实现！~ 还有额外奖品：${prize}`}\n
+          祝愿你在接下来的一年开开心心，健康幸福~
+          `,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${process.env.REACT_APP_SMS_TO_TOKEN}`,
+            },
+          }
+        );
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    console.log('useEffect', prize);
+    if (prize.includes('渣男')) {
+      window.alert(`远离渣男 幸福一生`);
+    } else if (prize.includes('男')) {
+      window.alert(`别瞎想了，${prize} 是没可能的事儿`);
+    } else if (prize.includes('妹')) {
+      window.alert(`别瞎想了，${prize} 是没可能的事儿`);
+    }
+
+    sendPrizeMsg();
+  }, [name, phoneNumber, prize, wish1, wish2, wish3]);
 
   return (
     <>
@@ -111,7 +143,7 @@ const Wish = ({ avatar, name }) => {
                     const index = Math.floor(Math.random() * 9);
                     // 调用stop停止旋转并传递中奖索引
                     myLucky.current.stop(index);
-                  }, 2500);
+                  }, 5000);
                 }}
                 onEnd={(prize) => {
                   console.log(prize.fonts[0].text);

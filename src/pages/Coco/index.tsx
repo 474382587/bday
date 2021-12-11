@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Image } from 'antd';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
 
@@ -10,16 +9,20 @@ import Coco1 from '../../images/coco1.jpg';
 import Coco2 from '../../images/coco2.jpg';
 import Coco3 from '../../images/coco3.jpg';
 import Coco4 from '../../images/coco4.jpg';
+import Coco5 from '../../images/coco5.jpg';
+import Coco6 from '../../images/coco6.jpg';
+import Coco7 from '../../images/coco7.jpg';
+import Coco8 from '../../images/coco8.jpg';
 
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import Wish from '../../components/Wish';
-const imageArr = [Coco1, Coco2, Coco3, Coco4];
+const imageArr = [Coco1, Coco5, Coco6, Coco7, Coco8, Coco2, Coco3, Coco4];
 
 SwiperCore.use([Autoplay]);
 
 const Coco = () => {
-  const [countDown, setCountDown] = useState<number>(20);
+  const [countDown, setCountDown] = useState<number>(1);
   const [showWish, setShowWish] = useState<boolean>(false);
   useEffect(() => {
     if (countDown < 1) return;
@@ -53,8 +56,10 @@ const Coco = () => {
             onSwiper={(swiper) => console.log(swiper)}
           >
             {imageArr.map((image, index) => (
-              <SwiperSlide>
-                <Image preview={false} width={'100vw'} src={image} />
+              <SwiperSlide key={index}>
+                <div className="swiper-image-container">
+                  <img src={image} alt="" />
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -74,13 +79,15 @@ const Coco = () => {
                   setShowWish(true);
                 }}
               >
-                去许个愿吧~ <GiftFilled />
+                来许个愿吧~ <GiftFilled />
               </div>
             )}
           </div>
         </div>
       )}
-      {showWish && <Wish avatar={Avatar} name={'董小姐'} />}
+      {showWish && (
+        <Wish phoneNumber={'+17788299426'} avatar={Avatar} name={'董小姐'} />
+      )}
     </>
   );
 };
