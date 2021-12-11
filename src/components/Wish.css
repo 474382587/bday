@@ -1,0 +1,44 @@
+/* @import '~antd/dist/antd.css'; */
+.draw {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.draw h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+.grid-container {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.congrats {
+  flex: 1;
+}
+
+.wish-list {
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #fafafa;
+}
+
+.wish-list .ant-input {
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px;
+}
+
+.ant-btn-primary {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  padding: 10px 20px;
+}
