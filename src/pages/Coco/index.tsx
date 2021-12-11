@@ -22,7 +22,7 @@ const imageArr = [Coco1, Coco5, Coco6, Coco7, Coco8, Coco2, Coco3, Coco4];
 SwiperCore.use([Autoplay]);
 
 const Coco = () => {
-  const [countDown, setCountDown] = useState<number>(1);
+  const [countDown, setCountDown] = useState<number>(45);
   const [showWish, setShowWish] = useState<boolean>(false);
   useEffect(() => {
     if (countDown < 1) return;

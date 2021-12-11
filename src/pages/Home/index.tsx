@@ -45,7 +45,7 @@ const Home = () => {
     default:
       return (
         <>
-          {false && (
+          {showPopup && (
             <div className="welcome">
               <Snowflake />
               <h1>圣诞的季节 就是你的季节</h1>
