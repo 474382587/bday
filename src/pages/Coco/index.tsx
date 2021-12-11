@@ -87,7 +87,7 @@ const Coco = () => {
       )}
       {showWish && (
         <Wish
-          phoneNumber={process.env.REACT_APP_ANGEL}
+          phoneNumber={process.env.REACT_APP_COCO}
           avatar={Avatar}
           name={'董小姐'}
         />
