@@ -21,7 +21,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowPopup(false);
-    }, 15000);
+    }, 0); //22000
   }, []);
 
   const generateSelection = () => {

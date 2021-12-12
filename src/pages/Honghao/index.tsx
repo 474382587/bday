@@ -74,7 +74,11 @@ const Honghao = () => {
           </Swiper>
           <audio controls={true} autoPlay={true}>
             <source
-              src="http://ip.h5.ra01.sycdn.kuwo.cn/ef4d3778e10c6c67125e7a0df9dd898b/61b5beb4/resource/n2/320/15/64/3788453729.mp3"
+              src={
+                process.env.NODE_ENV === 'development'
+                  ? 'http://ip.h5.ra01.sycdn.kuwo.cn/f632d7227ef2febe1cc7350fea6b3df7/61b65f65/resource/n1/128/53/96/185017203.mp3'
+                  : process.env.REACT_APP_AUDIO_URL_HONGHAO
+              }
               type="audio/mpeg"
             />
             Your browser does not support the audio element.

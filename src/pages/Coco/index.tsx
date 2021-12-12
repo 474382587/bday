@@ -66,7 +66,11 @@ const Coco = () => {
           </Swiper>
           <audio controls={true} autoPlay={true}>
             <source
-              src="https://sharefs.ali.kugou.com/202112110842/8f1125d5bd637d87d47017996d7c4e93/KGTX/CLTX001/485f19afc92d48a2b428d6d88e74c9a0.mp3"
+              src={
+                process.env.NODE_ENV === 'development'
+                  ? 'https://sharefs.ali.kugou.com/202112130443/066e779c03d1327a99b292e5ae0df2d6/KGTX/CLTX001/485f19afc92d48a2b428d6d88e74c9a0.mp3'
+                  : process.env.REACT_APP_AUDIO_URL_COCO
+              }
               type="audio/mpeg"
             />
             Your browser does not support the audio element.

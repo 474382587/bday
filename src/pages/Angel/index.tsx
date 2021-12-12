@@ -74,7 +74,11 @@ const Angel = () => {
 
           <audio controls={true} autoPlay={true}>
             <source
-              src="https://sharefs.ali.kugou.com/202112120014/dfcddc4bf6fdcf838124c9bdf324841c/KGTX/CLTX001/75a431fe132305d73bf1caedc26d9ddd.mp3"
+              src={
+                process.env.NODE_ENV === 'development'
+                  ? 'http://ip.h5.nf01.sycdn.kuwo.cn/69f6da53ee892c214a728b0b75f31756/61b66131/resource/n1/56/52/2540586845.mp3'
+                  : process.env.REACT_APP_AUDIO_URL_ANGEL
+              }
               type="audio/mpeg"
             />
             Your browser does not support the audio element.

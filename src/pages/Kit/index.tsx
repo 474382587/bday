@@ -65,7 +65,11 @@ const Kit = () => {
           </Swiper>
           <audio controls={true} autoPlay={true}>
             <source
-              src="http://www.ihaoge.net/kw/antiserver.kuwo.cn/anti.s?rid=MUSIC_202341063&response=res&format=mp3|aac&type=convert_url&br=128kmp3&agent=iPhone&callback=getlink&jpcallback=getlink.mp3"
+              src={
+                process.env.NODE_ENV === 'development'
+                  ? 'http://www.ihaoge.net/kw/antiserver.kuwo.cn/anti.s?rid=MUSIC_202341063&response=res&format=mp3|aac&type=convert_url&br=128kmp3&agent=iPhone&callback=getlink&jpcallback=getlink.mp3'
+                  : process.env.REACT_APP_AUDIO_URL_KIT
+              }
               type="audio/mpeg"
             />
             Your browser does not support the audio element.

@@ -84,7 +84,11 @@ const Sunshine = () => {
 
           <audio controls={true} autoPlay={true}>
             <source
-              src="http://fsios.hw.kugou.com/202112120444/411bc5f9659506e3a067453656095fcc/KGTX/CLTX001/9ba5834c9bbb2701d472c58d8a61fb41.mp3"
+              src={
+                process.env.NODE_ENV === 'development'
+                  ? 'https://sharefs.ali.kugou.com/202112130447/e9e516e2eaafe2808ec55ce41d812127/KGTX/CLTX001/9ba5834c9bbb2701d472c58d8a61fb41.mp3'
+                  : process.env.REACT_APP_AUDIO_URL_SUNSHINE
+              }
               type="audio/mpeg"
             />
             Your browser does not support the audio element.
