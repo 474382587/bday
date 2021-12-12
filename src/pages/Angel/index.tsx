@@ -9,7 +9,7 @@ import Angel1 from '../../images/angel01.jpg';
 import Angel2 from '../../images/angel2.jpg';
 import Angel3 from '../../images/angel3.png';
 import Angel4 from '../../images/angel4.jpg';
-// import Coco5 from '../../images/coco5.jpg';
+import Angel5 from '../../images/angel5.jpg';
 // import Coco6 from '../../images/coco6.jpg';
 // import Coco7 from '../../images/coco7.jpg';
 // import Coco8 from '../../images/coco8.jpg';
@@ -17,13 +17,20 @@ import Angel4 from '../../images/angel4.jpg';
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import Wish from '../../components/Wish';
-const imageArr = [Angel1, Angel2, Angel3, Angel4];
+import Deers from '../../components/Deers';
+const imageArr = [Angel5, Angel1, Angel2, Angel3, Angel4];
 
 SwiperCore.use([Autoplay]);
 
 const Angel = () => {
   const [countDown, setCountDown] = useState<number>(45);
   const [showWish, setShowWish] = useState<boolean>(false);
+  const [displayDeer, setDisplayDeer] = useState<boolean>(true);
+
+  setTimeout(() => {
+    setDisplayDeer(false);
+  }, 50000);
+
   useEffect(() => {
     if (countDown < 1) return;
     const countInterval = setInterval(() => {
@@ -36,6 +43,7 @@ const Angel = () => {
 
   return (
     <>
+      {displayDeer && <Deers />}
       {!showWish && (
         <div className="coco">
           <h1 className="headline">想患上社交牛逼症的天使 ~</h1>
@@ -47,7 +55,7 @@ const Angel = () => {
             祝你生日快乐~ 来年一定也要
             <span className="em">不！尴！尬！</span>哦！ ~ ~ ~
           </h1>
-
+          <h1>K哥想对你说：“爱你永不变吧（？or ！）” </h1>
           <Swiper
             spaceBetween={0}
             slidesPerView={1}
@@ -89,7 +97,11 @@ const Angel = () => {
         </div>
       )}
       {showWish && (
-        <Wish phoneNumber={process.env.REACT_APP_ANGEL} avatar={Avatar} name={'天使'} />
+        <Wish
+          phoneNumber={process.env.REACT_APP_ANGEL}
+          avatar={Avatar}
+          name={'天使'}
+        />
       )}
     </>
   );

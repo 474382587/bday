@@ -6,6 +6,8 @@ import TypeEffect from '../../components/TypeEffect';
 import { passcode } from '../../config.js';
 import Angel from '../Angel';
 import Coco from '../Coco';
+import Honghao from '../Honghao';
+import Kit from '../Kit';
 import Sunshine from '../Sunshine';
 
 import './index.css';
@@ -37,11 +39,11 @@ const Home = () => {
     case 'Coco':
       return <Coco />;
     case 'Honghao':
-      return <h1>Hello Honghao</h1>;
+      return <Honghao />;
     case 'Sunshine':
       return <Sunshine />;
     case 'Kit':
-      return <h1>Hello Kit</h1>;
+      return <Kit />;
     case 'Angel':
       return <Angel />;
     default:

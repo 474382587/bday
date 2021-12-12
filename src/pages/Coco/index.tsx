@@ -47,6 +47,7 @@ const Coco = () => {
             祝你生日快乐~ 来年一定也要
             <span className="em">开开心心</span>哦 ~ ~ ~
           </h1>
+          <h1>K哥想对你说：“爱你永不变吧（？or ！）” </h1>
 
           <Swiper
             spaceBetween={0}

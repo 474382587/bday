@@ -12,12 +12,22 @@ import Sunshine4 from '../../images/ss4.jpg';
 import Sunshine5 from '../../images/ss5.jpg';
 import Sunshine6 from '../../images/ss6.jpg';
 import Sunshine7 from '../../images/ss7.jpg';
+import Sunshine8 from '../../images/ss8.jpg';
+import Sunshine9 from '../../images/ss9.jpg';
+import Sunshine10 from '../../images/ss10.jpg';
+import Sunshine11 from '../../images/ss11.jpg';
+import Sunshine12 from '../../images/ss12.jpg';
 // import Sunshine8 from '../../images/sunshine8.jpg';
 
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import Wish from '../../components/Wish';
 const imageArr = [
+  Sunshine8,
+  Sunshine9,
+  Sunshine10,
+  Sunshine11,
+  Sunshine12,
   Sunshine1,
   Sunshine2,
   Sunshine3,
@@ -55,7 +65,7 @@ const Sunshine = () => {
             祝你生日快乐~ 来年一定也要
             <span className="em">不网恋！！！！！！</span>哦 ~ ~ ~
           </h1>
-
+          <h1>K哥想对你说：“爱你永不变吧（？or ！）” </h1>
           <Swiper
             spaceBetween={0}
             slidesPerView={1}
