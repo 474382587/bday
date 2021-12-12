@@ -29,7 +29,7 @@ const Angel = () => {
 
   setTimeout(() => {
     setDisplayDeer(false);
-  }, 50000);
+  }, 5000000);
 
   useEffect(() => {
     if (countDown < 1) return;
